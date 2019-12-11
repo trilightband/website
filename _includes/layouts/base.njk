@@ -1,23 +1,35 @@
-<!doctype html>
-<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
-
-	{% include "components/head.njk" %}
-
-	<body>
-
-		<header>
-			<em>
-				<a href="{{ '/' | url }}">{{ metadata.title }}</a>
-			</em>
-			{% include "components/nav.njk" %}
-		</header>
-
-		<main>
-			{{ layoutContent | safe }}
-		</main>
-
-		{% include "components/footer.njk" %}
-
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% set css %}
+			{% include "assets/css/main.css" %}
+			{% include "assets/css/tachyons.min.css" %}
+		{% endset %}
+		<style>{{ css | cssmin | safe }}</style>
+		<title>Tri Light Band</title>
+	</head>
+	<body class="avenir">
+		<div id="header" class="pb3">
+			<div id="nav" class="dt w-100 center"> 
+				<!--<div class="dtc w2 v-mid pa3">
+		</div>-->
+		<div class="dtc v-mid tc pt3">
+			<a class="f5 fw5 hover-black no-underline white-90 dib-ns pv2 ph3" href="/" >Home</a> 
+			<a class="f5 fw5 hover-black no-underline white-90 dib-ns pv2 ph3" href="#" >Music</a> 
+			<a class="f5 fw5 hover-black no-underline white-90 dib-l pv2 ph3" href="/contact" >Contact</a> 
+			<a class="f5 fw5 hover-black no-underline white-90 dib-l pv2 ph3" href="/about" >About</a> 
+		</div>
+			</div> 
+		</div>
+		{{ content | safe }}
+		<div class="flex justify-center pt4"> 
+			<div id="footer" class="flex justify-center w-80">
+				<div class="flex flex-column">
+					<p class="i moon-gray">© Tri Light Youth Band 2020
+				</div>
+			</div>
+		</div>
 	</body>
-
 </html>

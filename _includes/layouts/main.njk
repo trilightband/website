@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		{% set css %}
+			{% include "assets/css/main.css" %}
+			{% include "assets/css/tachyons.min.css" %}
+		{% endset %}
+		<style>{{ css | cssmin | safe }}</style>
+		<title>Tri Light Band</title>
+	</head>
+	<body class="avenir">
+		<div id="header">
+			<div id="nav" class="dt w-100 center"> 
+						<!--<div class="dtc w2 v-mid pa3">
+				</div>-->
+				<div class="dtc v-mid tc pt3">
+					<a class="f5 fw5 hover-black no-underline white-90 dib-ns pv2 ph3" href="/" >Home</a> 
+					<a class="f5 fw5 hover-black no-underline white-90 dib-ns pv2 ph3" href="#" >Music</a> 
+					<a class="f5 fw5 hover-black no-underline white-90 dib-l pv2 ph3" href="/contact" >Contact</a> 
+					<a class="f5 fw5 hover-black no-underline white-90 dib-l pv2 ph3" href="/about" >About</a> 
+				</div>
+			</div> 
+			<div class="cover mt3 bg-left bg-center-l">
+				<div class="bg-black-80 pb4">
+					<div class="tc pt4 ph3">
+						<h1 class="f2 mt0 f-headline-l fw2 white-90 mb0 lh-title"><b>Tri Light</b> Youth Band</h1>
+						<svg class="link mt2 w3 w4-l black-90" data-icon="logo" viewBox="0 0 430 443">
+							<style>
+.st2,.st3{fill:#fff}.st3{stroke:#000;stroke-width:5;stroke-miterlimit:10}
+							</style>
+							<g id="Layer_2">
+							<path d="M269 349l-66-60-87 20 36-81-46-77 89 10 59-68 18 87 83 35-78 45zM170 5c4 5-45 32-83 98-30 52-33 92-38 91-7-1-15-66 18-118 34-56 99-77 103-71z" class="st3"/>
+							<path d="M32 133c7 2-10 55 8 129 15 58 41 89 36 92-6 4-56-37-69-98-14-64 17-124 25-123zM46 355c4-6 46 30 122 41 60 9 98-3 99 2 1 7-56 38-117 27-64-12-108-64-104-70z" class="st3"/>
+							<path d="M230 437c-2-6 51-22 103-79 40-44 51-83 56-80 7 2 0 67-43 112-45 47-113 54-116 47zM404 294c-7-1 6-55-17-128-19-57-47-85-42-89s58 34 75 93c19 63-8 125-16 124z" class="st3"/>
+							<path d="M382 81c-4 6-45-32-120-46-59-12-98-1-99-7S221-7 281 7c64 14 106 68 101 74z" class="st3"/>
+							</g>
+						</svg>
+					</div>
+				</div>
+			</div> 
+		</div>
+		{{ content | safe }}
+		<div class="flex justify-center pt4"> 
+			<div id="footer" class="flex justify-center w-80 bt">
+				<div class="flex flex-column">
+					<h3 class="f2 mb1 lh-subtitle">Any questions?</h3>
+					<div class="flex justify-center pt2 pb4">
+						<a href="#"><img src="img/fb.svg" width="50rem" class="pr4"/></a>
+						<a href="mailto:trilightband@gmail.com"><img src="img/mail.svg" width="50rem"/></a>
+					</div>
+					<p class="i moon-gray">© Tri Light Youth Band 2020
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
